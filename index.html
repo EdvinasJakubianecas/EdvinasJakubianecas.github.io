@@ -45,6 +45,7 @@
         <li><a href="#skills"><i class="bi bi-stars navicon"></i><span>Įgūdžiai</span></a></li>
         <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Patirtis</span></a></li>
         <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span>Atlikti darbai</span></a></li>
+        <li><a href="#progress"><i class="bi bi-trophy navicon"></i><span>Kompetencijų pažanga</span></a></li>
         <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i><span>Paslaugos</span></a></li>
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Kontaktai</span></a></li>
       </ul>
@@ -76,6 +77,14 @@
 
     <!-- About Section -->
     <section id="about" class="about section">
+
+      <!-- Animuotos CSS figūros -->
+      <div class="about-shapes" aria-hidden="true">
+        <span class="shape shape-circle"></span>
+        <span class="shape shape-triangle"></span>
+        <span class="shape shape-square"></span>
+        <span class="shape shape-ring"></span>
+      </div>
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -329,6 +338,175 @@
       </div>
 
     </section><!-- /Portfolio Section -->
+
+    <!-- Progress Section -->
+    <section id="progress" class="progress-module section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Kompetencijų pažanga</h2>
+        <p>Mano įgūdžių mokymosi eiga: ką planuoju, ką mokausi ir ką jau pasiekiau</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+        <div class="kb-layout" data-aos="fade-up" data-aos-delay="100">
+
+          <!-- Šoninė suvestinė: XP, lygis, rangas, progresas, statistika -->
+          <aside class="kb-summary" aria-label="Pažangos suvestinė">
+
+            <div class="kb-stat-cards">
+              <div class="kb-stat kb-stat-xp">
+                <i class="bi bi-star"></i>
+                <div><span class="kb-stat-label">Bendras XP:</span><strong>210 XP</strong></div>
+              </div>
+              <div class="kb-stat kb-stat-level">
+                <i class="bi bi-bar-chart-fill"></i>
+                <div><span class="kb-stat-label">Lygis:</span><strong>3</strong></div>
+              </div>
+              <div class="kb-stat kb-stat-rank">
+                <i class="bi bi-trophy"></i>
+                <div><span class="kb-stat-label">Rangas:</span><strong>Specialistas</strong></div>
+              </div>
+            </div>
+
+            <div class="xp-progress">
+              <div class="xp-progress-head">
+                <span>Progresas iki kito lygio</span>
+                <span>40%</span>
+              </div>
+              <div class="xp-bar" role="progressbar" aria-label="Progresas iki kito lygio" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                <div class="xp-fill"><span>40%</span></div>
+              </div>
+              <p class="xp-note">210 iš 300 XP iki 4 lygio (Profesionalas)</p>
+            </div>
+
+            <ul class="kb-stats">
+              <li><span><i class="bi bi-code-slash"></i> Įgūdžiai:</span> <strong>8</strong></li>
+              <li><span><i class="bi bi-check-circle"></i> Atlikta:</span> <strong>4</strong></li>
+              <li><span><i class="bi bi-pie-chart"></i> Procentas:</span> <strong>50%</strong></li>
+            </ul>
+
+          </aside>
+
+          <!-- Įgūdžių lenta (Skill Kanban) -->
+          <div class="kb-board">
+
+            <section class="kb-column kb-column-planned" aria-label="Planuojama">
+              <header class="kb-column-head">
+                <i class="bi bi-calendar-event"></i>
+                <h3>Planuojama</h3>
+                <span class="kb-count">2</span>
+              </header>
+              <div class="kb-cards">
+            <article class="kb-card">
+              <span class="kb-icon kb-icon-planned"><i class="bi bi-braces"></i></span>
+              <div class="kb-card-body">
+                <h4>JavaScript pagrindai</h4>
+                <div class="kb-meta">
+                  <span class="kb-status kb-status-planned">Būsena: Planuojama</span>
+                  <span class="kb-xp">XP: 40</span>
+                </div>
+              </div>
+            </article>
+            <article class="kb-card">
+              <span class="kb-icon kb-icon-planned"><i class="bi bi-diagram-3"></i></span>
+              <div class="kb-card-body">
+                <h4>DOM valdymas</h4>
+                <div class="kb-meta">
+                  <span class="kb-status kb-status-planned">Būsena: Planuojama</span>
+                  <span class="kb-xp">XP: 30</span>
+                </div>
+              </div>
+            </article>
+              </div>
+            </section>
+
+            <section class="kb-column kb-column-learning" aria-label="Mokomasi">
+              <header class="kb-column-head">
+                <i class="bi bi-book"></i>
+                <h3>Mokomasi</h3>
+                <span class="kb-count">2</span>
+              </header>
+              <div class="kb-cards">
+            <article class="kb-card">
+              <span class="kb-icon kb-icon-learning"><i class="bi bi-filetype-css"></i></span>
+              <div class="kb-card-body">
+                <h4>CSS animacijos</h4>
+                <div class="kb-meta">
+                  <span class="kb-status kb-status-learning">Būsena: Mokomasi</span>
+                  <span class="kb-xp">XP: 30</span>
+                </div>
+              </div>
+            </article>
+            <article class="kb-card">
+              <span class="kb-icon kb-icon-learning"><i class="bi bi-ui-checks"></i></span>
+              <div class="kb-card-body">
+                <h4>Formų validacija</h4>
+                <div class="kb-meta">
+                  <span class="kb-status kb-status-learning">Būsena: Mokomasi</span>
+                  <span class="kb-xp">XP: 20</span>
+                </div>
+              </div>
+            </article>
+              </div>
+            </section>
+
+            <section class="kb-column kb-column-done" aria-label="Atlikta">
+              <header class="kb-column-head">
+                <i class="bi bi-check-circle"></i>
+                <h3>Atlikta</h3>
+                <span class="kb-count">4</span>
+              </header>
+              <div class="kb-cards">
+            <article class="kb-card">
+              <span class="kb-icon kb-icon-done"><i class="bi bi-filetype-html"></i></span>
+              <div class="kb-card-body">
+                <h4>HTML pagrindai</h4>
+                <div class="kb-meta">
+                  <span class="kb-status kb-status-done">Būsena: Atlikta</span>
+                  <span class="kb-xp">XP: 50</span>
+                </div>
+              </div>
+            </article>
+            <article class="kb-card">
+              <span class="kb-icon kb-icon-done"><i class="bi bi-github"></i></span>
+              <div class="kb-card-body">
+                <h4>Git ir GitHub</h4>
+                <div class="kb-meta">
+                  <span class="kb-status kb-status-done">Būsena: Atlikta</span>
+                  <span class="kb-xp">XP: 40</span>
+                </div>
+              </div>
+            </article>
+            <article class="kb-card">
+              <span class="kb-icon kb-icon-done"><i class="bi bi-grid-1x2"></i></span>
+              <div class="kb-card-body">
+                <h4>Flexbox / Grid</h4>
+                <div class="kb-meta">
+                  <span class="kb-status kb-status-done">Būsena: Atlikta</span>
+                  <span class="kb-xp">XP: 50</span>
+                </div>
+              </div>
+            </article>
+            <article class="kb-card">
+              <span class="kb-icon kb-icon-done"><i class="bi bi-display"></i></span>
+              <div class="kb-card-body">
+                <h4>Responsyvus dizainas</h4>
+                <div class="kb-meta">
+                  <span class="kb-status kb-status-done">Būsena: Atlikta</span>
+                  <span class="kb-xp">XP: 70</span>
+                </div>
+              </div>
+            </article>
+              </div>
+            </section>
+
+          </div><!-- End Board -->
+
+        </div>
+      </div>
+
+    </section><!-- /Progress Section -->
 
     <!-- Services Section -->
     <section id="services" class="services section">
