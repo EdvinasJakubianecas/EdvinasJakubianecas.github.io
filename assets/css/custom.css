@@ -1,9 +1,4 @@
-/*--------------------------------------------------------------
-# custom.css - 9 laboratorinis darbas
-# Įjungiamas PO main.css, todėl perrašo šablono stilius.
---------------------------------------------------------------*/
-
-/* 0. Kintamieji: nauja paletė ir šriftai (geras kontrastas) */
+/* 0. Kintamieji: nauja paletė ir šriftai  */
 :root {
   --default-font: "Nunito", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
   --heading-font: "Merriweather", Georgia, "Times New Roman", serif;
@@ -266,4 +261,395 @@ a:focus-visible { outline: 3px solid #f59e0b; outline-offset: 3px; border-radius
   .about .content { padding: 22px 20px; }
   .about.section, .resume.section, .portfolio.section { padding: 60px 0; }
   .hero-actions { justify-content: center; }
+}
+
+/*--------------------------------------------------------------
+# 10 laboratorinis darbas
+# Kompetencijų pažangos modulis (HTML + CSS, be JavaScript)
+--------------------------------------------------------------*/
+.progress-module .kb-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* ---- Šoninė suvestinė ---- */
+.kb-summary {
+  background: #ffffff;
+  border: 1px solid #cfe3ea;
+  border-radius: 18px;
+  box-shadow: var(--card-shadow);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.kb-stat-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.kb-stat {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  border-radius: 12px;
+}
+
+.kb-stat i {
+  font-size: 22px;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 10px;
+}
+
+.kb-stat-label {
+  display: block;
+  font-size: 13px;
+  line-height: 1.2;
+  color: #3e4c59;
+}
+
+.kb-stat strong {
+  display: block;
+  font-family: var(--heading-font);
+  font-size: 22px;
+  line-height: 1.3;
+  color: #102a43;
+}
+
+.kb-stat-xp    { background: #dbeafe; }
+.kb-stat-xp i  { color: #1d4ed8; }
+.kb-stat-level { background: #ede9fe; }
+.kb-stat-level i { color: #6d28d9; }
+.kb-stat-rank  { background: #dcfce7; }
+.kb-stat-rank i { color: #15803d; }
+
+/* ---- XP progreso juosta ---- */
+.xp-progress-head {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--heading-color);
+  margin-bottom: 8px;
+}
+
+.xp-bar {
+  height: 24px;
+  background: #d9e2ec;               /* likusi dalis */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.xp-fill {
+  width: 40%;                         /* pavyzdinė reikšmė */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  background: linear-gradient(90deg, #1d4ed8, #0e7490);  /* užpildyta dalis */
+  border-radius: 20px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.xp-note {
+  margin: 8px 0 0;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #3e4c59;
+}
+
+/* ---- Statistika ---- */
+.kb-stats {
+  list-style: none;
+  margin: 0;
+  padding: 14px 0 0;
+  border-top: 1px solid #d9e2ec;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.kb-stats li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  color: #1f2933;
+}
+
+.kb-stats li i {
+  color: var(--accent-color);
+  margin-right: 6px;
+}
+
+.kb-stats strong {
+  font-family: var(--heading-font);
+  color: #102a43;
+}
+
+/* ---- Lenta (Kanban) ---- */
+.kb-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  align-items: start;
+  background: #ffffff;
+  border: 1px solid #cfe3ea;
+  border-radius: 18px;
+  box-shadow: var(--card-shadow);
+  padding: 16px;
+}
+
+.kb-column {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  overflow: hidden;
+  min-height: 220px;
+  padding: 0;
+}
+
+.kb-column-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-bottom: 3px solid;
+}
+
+.kb-column-head h3 {
+  margin: 0;
+  flex: 1;
+  font-family: var(--default-font);
+  font-size: 17px;
+  font-weight: 800;
+  color: #102a43;
+}
+
+.kb-column-head i { font-size: 18px; }
+
+.kb-count {
+  min-width: 26px;
+  padding: 2px 8px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 800;
+  color: #102a43;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+}
+
+.kb-column-planned .kb-column-head  { background: #fef3c7; border-color: #f59e0b; }
+.kb-column-planned .kb-column-head i { color: #b45309; }
+.kb-column-learning .kb-column-head { background: #dbeafe; border-color: #3b82f6; }
+.kb-column-learning .kb-column-head i { color: #1d4ed8; }
+.kb-column-done .kb-column-head     { background: #dcfce7; border-color: #22c55e; }
+.kb-column-done .kb-column-head i   { color: #15803d; }
+
+.kb-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 14px;
+}
+
+/* ---- Įgūdžio kortelė ---- */
+.kb-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(11, 60, 93, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kb-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(11, 60, 93, 0.16);
+}
+
+.kb-icon {
+  flex: 0 0 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.kb-icon-planned  { background: #fef3c7; color: #b45309; }
+.kb-icon-learning { background: #dbeafe; color: #1d4ed8; }
+.kb-icon-done     { background: #dcfce7; color: #15803d; }
+
+.kb-card-body { min-width: 0; flex: 1; }
+
+.kb-card h4 {
+  margin: 0 0 6px;
+  font-family: var(--default-font);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.3;
+  color: #102a43;
+}
+
+.kb-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.kb-status,
+.kb-xp {
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.6;
+  border-radius: 20px;
+}
+
+.kb-status-planned  { background: #fef3c7; color: #78350f; }
+.kb-status-learning { background: #dbeafe; color: #1e3a8a; }
+.kb-status-done     { background: #dcfce7; color: #14532d; }
+.kb-xp              { background: #e2e8f0; color: #1f2933; }
+
+/* ---- Prisitaikymas ---- */
+@media (max-width: 1100px) {
+  .progress-module .kb-layout { grid-template-columns: 1fr; }
+  .kb-stat-cards { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .kb-board { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .kb-stat-cards { grid-template-columns: 1fr; }
+}
+
+/*--------------------------------------------------------------
+# Papildoma 1: „Paslaugų“ skilties animuotas gradientinis fonas
+--------------------------------------------------------------*/
+.services.section {
+  background: linear-gradient(120deg, #e0f2fe, #ede9fe, #dcfce7, #fef3c7, #e0f2fe);
+  background-size: 400% 400%;
+  animation: services-gradient 16s ease-in-out infinite;
+}
+
+@keyframes services-gradient {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/*--------------------------------------------------------------
+# Papildoma 2: „Apie“ skilties animuotos CSS figūros
+--------------------------------------------------------------*/
+.about.section { position: relative; }
+
+.about-shapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.about .container { position: relative; z-index: 1; }
+
+.shape { position: absolute; display: block; }
+
+/* apskritimas: plūduriavimas (floating) */
+.shape-circle {
+  width: 90px;
+  height: 90px;
+  top: 8%;
+  left: 4%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #67e8f9, #0e7490);
+  opacity: 0.35;
+  animation: shape-float 6s ease-in-out infinite;
+}
+
+/* trikampis: sukimasis (rotating) */
+.shape-triangle {
+  width: 0;
+  height: 0;
+  top: 12%;
+  right: 6%;
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
+  border-bottom: 80px solid #f59e0b;
+  opacity: 0.35;
+  animation: shape-spin 12s linear infinite;
+}
+
+/* kvadratas: sukimasis + didėjimas */
+.shape-square {
+  width: 60px;
+  height: 60px;
+  bottom: 10%;
+  left: 8%;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #a78bfa, #6d28d9);
+  opacity: 0.30;
+  animation: shape-spin-scale 9s ease-in-out infinite;
+}
+
+/* žiedas: didėjimas / mažėjimas (scaling) */
+.shape-ring {
+  width: 110px;
+  height: 110px;
+  bottom: 6%;
+  right: 5%;
+  border-radius: 50%;
+  border: 12px solid #22c55e;
+  opacity: 0.30;
+  animation: shape-pulse 5s ease-in-out infinite;
+}
+
+@keyframes shape-float {
+  0%, 100% { transform: translate(0, 0); }
+  25%      { transform: translate(25px, -20px); }
+  50%      { transform: translate(0, -40px); }
+  75%      { transform: translate(-25px, -20px); }
+}
+
+@keyframes shape-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes shape-spin-scale {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  50%      { transform: rotate(180deg) scale(1.6); }
+}
+
+@keyframes shape-pulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.35); }
+}
+
+/* Žmonėms, kuriems judesys trukdo */
+@media (prefers-reduced-motion: reduce) {
+  .services.section,
+  .shape { animation: none; }
 }
