@@ -710,6 +710,81 @@
 
         </div>
 
+        <!-- Atsiliepimo forma (JavaScript, 11 LD) -->
+        <div class="row justify-content-center mt-5">
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+
+            <form id="contact-form" class="cv-form" novalidate>
+              <h3>Atsiliepimo forma</h3>
+              <p class="cv-form-note">Užpildykite visus laukus. Duomenys niekur nesiunčiami, jie parodomi tik šiame puslapyje.</p>
+
+              <div class="cv-form-grid">
+
+                <div class="form-field">
+                  <label for="vardas">Vardas</label>
+                  <input type="text" id="vardas" name="vardas" autocomplete="given-name" placeholder="Vardenis" required aria-describedby="vardas-error">
+                  <div class="field-error" id="vardas-error" aria-live="polite"></div>
+                </div>
+
+                <div class="form-field">
+                  <label for="pavarde">Pavardė</label>
+                  <input type="text" id="pavarde" name="pavarde" autocomplete="family-name" placeholder="Pavardenis" required aria-describedby="pavarde-error">
+                  <div class="field-error" id="pavarde-error" aria-live="polite"></div>
+                </div>
+
+                <div class="form-field">
+                  <label for="email">El. paštas</label>
+                  <input type="email" id="email" name="email" autocomplete="email" placeholder="vardas@pastas.lt" required aria-describedby="email-error">
+                  <div class="field-error" id="email-error" aria-live="polite"></div>
+                </div>
+
+                <div class="form-field">
+                  <label for="telefonas">Telefono numeris</label>
+                  <input type="tel" id="telefonas" name="telefonas" autocomplete="tel" inputmode="numeric" placeholder="+370 6xx xxxxx" maxlength="14" required aria-describedby="telefonas-error">
+                  <div class="field-error" id="telefonas-error" aria-live="polite"></div>
+                </div>
+
+                <div class="form-field form-field-full">
+                  <label for="adresas">Adresas</label>
+                  <input type="text" id="adresas" name="adresas" autocomplete="street-address" placeholder="Gatvė, namo numeris, miestas" required aria-describedby="adresas-error">
+                  <div class="field-error" id="adresas-error" aria-live="polite"></div>
+                </div>
+
+              </div>
+
+              <fieldset class="cv-rating">
+                <legend>Įvertinkite svetainę (skalė 1-10)</legend>
+
+                <div class="form-field">
+                  <label for="klausimas1">1. Kaip vertinate svetainės dizainą?</label>
+                  <input type="number" id="klausimas1" name="klausimas1" min="1" max="10" step="1" placeholder="1-10" required aria-describedby="klausimas1-error">
+                  <div class="field-error" id="klausimas1-error" aria-live="polite"></div>
+                </div>
+
+                <div class="form-field">
+                  <label for="klausimas2">2. Kaip vertinate turinio aiškumą?</label>
+                  <input type="number" id="klausimas2" name="klausimas2" min="1" max="10" step="1" placeholder="1-10" required aria-describedby="klausimas2-error">
+                  <div class="field-error" id="klausimas2-error" aria-live="polite"></div>
+                </div>
+
+                <div class="form-field">
+                  <label for="klausimas3">3. Kaip vertinate naudojimo patogumą?</label>
+                  <input type="number" id="klausimas3" name="klausimas3" min="1" max="10" step="1" placeholder="1-10" required aria-describedby="klausimas3-error">
+                  <div class="field-error" id="klausimas3-error" aria-live="polite"></div>
+                </div>
+              </fieldset>
+
+              <div class="cv-form-actions">
+                <button type="submit" id="submit-btn" class="btn-cv" disabled>Siųsti</button>
+                <button type="button" id="clear-btn" class="btn-cv btn-cv-outline">Išvalyti</button>
+              </div>
+
+              <div id="form-output" class="form-output" aria-live="polite" hidden></div>
+            </form>
+
+          </div>
+        </div><!-- End Form -->
+
       </div>
 
     </section><!-- /Contact Section -->
@@ -754,6 +829,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/custom.js"></script>
 
 </body>
 
